@@ -1,0 +1,855 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3B5704;
+    color: #EDFFCC;
+    line-height: 1.6;
+    font-family: 'poppins', sans-serif;
+}
+
+.topp {
+    background-image: url(me.png.jpg);
+    background-size: cover;
+    /* Makes the image cover the entire page */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents tiling */
+    color: #3B5704;
+    height: 900px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar nav ul li {
+    margin-left: 1.5rem;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3B5704;
+}
+
+.navbar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    padding-top: 600px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #EDFFCC;
+}
+
+
+.intro {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: #3B5704;
+    color: #EDFFCC;
+    border: none;
+    cursor: pointer;
+}
+
+.cta a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cta a:hover {
+    color: #3B5704;
+}
+
+.cta:hover {
+    background: #EDFFCC;
+    color: #3B5704;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    color: #3B5704;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(me.jpg);
+    height: 900px;
+    background-size: inherit;
+    /* Makes the image cover the entire page */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents tiling */
+    color: #3B5704;
+}
+
+.about-content {
+    display: flex;
+    max-width: 1100px;
+    width: 1100px;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+    color: #3B5704;
+    text-align: left;
+}
+
+.intro-text h2 {
+    font-size: 1.8rem;
+    color: #3B5704;
+    margin-bottom: 15px;
+    text-align: initial;
+    padding-left: 25px;
+}
+
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 2.3;
+    max-width: 1100px;
+    color: #3B5704;
+    width: 1100px;
+    font-weight: 800;
+}
+
+.glow:hover {
+    color: #EDFFCC;
+    transition: ease-in;
+}
+
+/* Skills Section */
+.skills {
+    padding: 4em 2rem;
+    text-align: center;
+    height: 500px;
+
+}
+
+
+.skills h1 {
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+.skills h1:hover {
+
+    text-decoration: wavy;
+}
+
+.skill-cards {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+.dpc {
+    position: relative;
+    /* Necessary for positioning the dropdown */
+    display: inline-block;
+    /* Ensures the dropdown is tied to the div */
+}
+
+.card {
+    padding: 2rem 2rem;
+    background-color: #EDFFCC;
+    color: #3B5704;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    padding: 2.5rem 3rem;
+}
+
+.dropdown-menu {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    top: 97%;
+    /* Positions below the custom div */
+    left: 0;
+    background-color: #3B5704;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    padding: 10px 0;
+    min-width: 100px;
+    z-index: 100;
+    width: 100%;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #EDFFCC;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.dropdown-item:hover {
+    background-color: #EDFFCC;
+    color: #3B5704;
+    font-weight: bolder;
+}
+
+/* Show dropdown on hover */
+.dpc:hover .dropdown-menu {
+    display: block;
+    /* Display dropdown when the parent is hovered */
+}
+
+.Choose {
+    margin-top: 20px;
+    line-height: 4;
+}
+
+.Choose h1 {
+    text-align: center;
+}
+
+.Choose ol li {
+    list-style-type: square;
+}
+
+.Choose ol {
+    padding-left: 35px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.project-card {
+    background: #3B5704;
+    color: #EDFFCC;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 300px;
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.mailco {
+    text-align: initial;
+    border: #EDFFCC 1px solid;
+    width: 500px;
+    margin: auto;
+    padding-left: 20px;
+    height: 250px;
+    padding-top: 45px;
+    background-color: #EDFFCC;
+    border-radius: 15px;
+    color: #3B5704;
+}
+
+.mailco p {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.mailco p a {
+    text-decoration: underline;
+    font-size: medium;
+    font-weight: normal;
+    color: #3B5704;
+}
+
+.contact h1 {
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+.preview-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: #EDFFCC;
+    color: #3B5704;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.preview-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.preview-btn a:hover {
+    color: inherit;
+}
+
+.preview-btn:hover {
+    background: #3B5704;
+    color: #EDFFCC;
+    border-radius: 5px;
+    font-weight: bolder;
+    box-shadow: 0 7px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Add animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero,
+.skills,
+.Choose,
+.contact {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.skill-cards .card {
+    animation: slideIn 0.6s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .body {
+        line-height: 1.5;
+        width: 100%;
+        font-size: medium;
+    }
+
+    .topp {
+        height: 500px;
+    }
+
+    .navbar {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .navbar h1 {
+        font-size: larger;
+    }
+
+    .hero {
+        padding-top:  290px;
+    }
+    
+    .hero h2 {
+       font-size: medium;
+        margin-bottom: 0px;
+    }
+    
+    .hero p {
+        font-size: small;
+        margin-bottom: 0px;
+        color: #3B5704;
+    }
+
+    .intro {
+        font-size: larger;
+        font-weight: bolder;
+    }
+    
+    .cta {
+        padding: 7px 7px;
+        font-size: x-small;
+        width: 80px;
+        border-radius: 3px;
+        font-weight: bold;
+    }
+    
+    
+    .skills {
+        padding: 1.5em 1rem;
+        text-align: center;
+        height: 560px;
+    
+    }
+    
+    
+    .skills h1 {
+        font-size: x-large;
+        font-weight: 700;
+    }
+    
+    .skill-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 55px ;
+    }
+    
+    .dpc {
+        position: relative;
+        /* Necessary for positioning the dropdown */
+        display: inline-block;
+        /* Ensures the dropdown is tied to the div */
+    }
+    
+    .card {
+        padding: 1.5rem 1.5rem;
+        background-color: #EDFFCC;
+        color: #3B5704;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        width: 250px;
+        margin: auto;
+    }
+    
+    .dropdown-menu {
+        display: none;
+        /* Hidden by default */
+        position: absolute;
+        top: 97%;
+        /* Positions below the custom div */
+        left: 0;
+        background-color: #3B5704;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        padding: 10px 0;
+        min-width: 50px;
+        z-index: 100;
+        width: 100%;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: x-large;
+        margin-top: 30px;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        color: #3B5704;
+    }
+    
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(me.jpg);
+        height: 100%;
+        background-size: inherit;
+        /* Makes the image cover the entire page */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents tiling */
+        color: #3B5704;
+    }
+    
+    .about-content {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        flex-direction: column;
+        opacity: 0;
+        animation: fadeInUp 1.5s forwards;
+        color: #3B5704;
+        text-align: left;
+    }
+    
+    .intro-text h2 {
+        font-size: x-large;
+        color: #3B5704;
+        margin-bottom: 15px;
+        text-align: initial;
+        padding-left: 25px;
+        display: none;
+    }
+    
+    
+    .intro-text p {
+        font-size: small;
+        line-height: 2;
+        max-width: 100%;
+        color: #3B5704;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .Choose {
+        margin-top: 10px;
+        line-height: 3;
+        animation: fadeInUp 1.5s forwards;
+        width: 100%;
+        font-size: small;
+    }
+    
+    .Choose h1 {
+        text-align: center;
+        font-size: large;
+    }
+
+    .contact {
+        padding: 1rem 2rem;
+        text-align: center;
+    }
+    
+    .mailco {
+        text-align: initial;
+        border: #EDFFCC 1px solid;
+        width: 300px;
+        margin: auto;
+        padding-left: 20px;
+        height: 200px;
+        padding-top: 45px;
+        background-color: #EDFFCC;
+        border-radius: 15px;
+        color: #3B5704;
+    }
+    
+    .mailco p {
+        font-size: small;
+        font-weight: bold;
+    }
+    
+    .mailco p a {
+        text-decoration: underline;
+        font-size: small;
+        font-weight: normal;
+        color: #3B5704;
+    }
+    
+    .contact h1 {
+        font-weight: 700;
+        font-size: x-large;
+    }
+
+    .riri{
+    width: 100%;
+    }
+    
+    
+    
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .body {
+        line-height: 1.5;
+        width: 100%;
+        font-size: medium;
+    }
+
+    .topp {
+        height: 460px;
+    }
+
+    .navbar {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .navbar h1 {
+        font-size: larger;
+    }
+
+    .hero {
+        padding-top:  290px;
+    }
+    
+    .hero h2 {
+       font-size: medium;
+        margin-bottom: 0px;
+    }
+    
+    .hero p {
+        font-size: small;
+        margin-bottom: 0px;
+        color: #3B5704;
+    }
+
+    .intro {
+        font-size: larger;
+        font-weight: bolder;
+    }
+    
+    .cta {
+        padding: 7px 7px;
+        font-size: x-small;
+        width: 80px;
+        border-radius: 3px;
+    }
+
+    .skills {
+        padding: 1.5em 1rem;
+        text-align: center;
+        height: 570px;
+    
+    }
+    
+    .skills h1 {
+        font-size: x-large;
+        font-weight: 700;
+    }
+    
+    .skill-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 50px ;
+    }
+    
+    .dpc {
+        position: relative;
+        /* Necessary for positioning the dropdown */
+        display: inline-block;
+        /* Ensures the dropdown is tied to the div */
+    }
+    
+    .card {
+        padding: 1rem 1rem;
+        background-color: #EDFFCC;
+        color: #3B5704;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        width: 200px;
+        margin: auto;
+    }
+    
+    .dropdown-menu {
+        display: none;
+        /* Hidden by default */
+        position: absolute;
+        top: 97%;
+        /* Positions below the custom div */
+        left: 0;
+        background-color: #3B5704;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        padding: 10px 0;
+        min-width: 50px;
+        z-index: 100;
+        width: 100%;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: x-large;
+        margin-top: 30px;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        color: #3B5704;
+    }
+    
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(me.jpg);
+        height: 100%;
+        background-size: inherit;
+        /* Makes the image cover the entire page */
+        background-position: center;
+        /* Centers the image */
+        background-repeat: no-repeat;
+        /* Prevents tiling */
+        color: #3B5704;
+    }
+    
+    .about-content {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        flex-direction: column;
+        opacity: 0;
+        animation: fadeInUp 1.5s forwards;
+        color: #3B5704;
+        text-align: left;
+    }
+    
+    .intro-text h2 {
+        font-size: x-large;
+        color: #3B5704;
+        margin-bottom: 15px;
+        text-align: initial;
+        padding-left: 25px;
+        display: none;
+    }
+    
+    .intro-text p {
+        font-size: small;
+        line-height: 2;
+        max-width: 100%;
+        color: #3B5704;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .Choose {
+        margin-top: 10px;
+        line-height: 3;
+        animation: fadeInUp 1.5s forwards;
+        width: 100%;
+        font-size: small;
+    }
+    
+    .Choose h1 {
+        text-align: center;
+        font-size: large;
+    }
+    
+    .contact {
+        text-align: center;
+    }
+    
+    .mailco {
+        text-align: initial;
+        border: #EDFFCC 1px solid;
+        width: 250px;
+        margin: auto;
+        padding-left: 20px;
+        height: 180px;
+        padding-top: 25px;
+        background-color: #EDFFCC;
+        border-radius: 15px;
+        color: #3B5704;
+    }
+    
+    .mailco p {
+        font-size: smaller;
+        font-weight: bold;
+    }
+    
+    .mailco p a {
+        text-decoration: underline;
+        font-size: smaller;
+        font-weight: normal;
+        color: #3B5704;
+    }
+    
+    .contact h1 {
+        font-weight: 700;
+        font-size: x-large;
+    }
+
+
+
+}
