@@ -653,7 +653,7 @@ body {
     }
 
     .topp {
-        height: 460px;
+        height: 550px;
     }
 
     .navbar {
@@ -665,7 +665,7 @@ body {
     }
 
     .hero {
-        padding-top:  290px;
+        padding-top:  320px;
     }
     
     .hero h2 {
@@ -694,7 +694,7 @@ body {
     .skills {
         padding: 1.5em 1rem;
         text-align: center;
-        height: 570px;
+        height: 550px;
     
     }
     
@@ -728,7 +728,7 @@ body {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: background-color 0.3s ease;
         cursor: pointer;
-        width: 200px;
+        width: 250px;
         margin: auto;
     }
     
@@ -745,9 +745,9 @@ body {
         border-top-left-radius: 0%;
         border-top-right-radius: 0%;
         padding: 10px 0;
-        min-width: 50px;
-        z-index: 100;
-        width: 100%;
+        min-width: 100%;
+       /* z-index: 100;*/
+        width: inherit;
     }
 
     .section-title {
@@ -783,6 +783,7 @@ body {
         animation: fadeInUp 1.5s forwards;
         color: #3B5704;
         text-align: left;
+        padding: 5px;
     }
     
     .intro-text h2 {
@@ -825,7 +826,7 @@ body {
         border: #EDFFCC 1px solid;
         width: 250px;
         margin: auto;
-        padding-left: 20px;
+        padding-left: 15px;
         height: 180px;
         padding-top: 25px;
         background-color: #EDFFCC;
