@@ -676,7 +676,7 @@ body {
     .hero p {
         font-size: small;
         margin-bottom: 0px;
-        color: #3B5704;
+        color: #EDFFCC;
     }
 
     .intro {
@@ -694,7 +694,7 @@ body {
     .skills {
         padding: 1.5em 1rem;
         text-align: center;
-        height: 530px;
+        height: 520px;
     
     }
     
@@ -770,7 +770,7 @@ body {
         /* Centers the image */
         background-repeat: no-repeat;
         /* Prevents tiling */
-        color: #3B5704;
+        color: #EDFFCC;
     }
     
     .about-content {
