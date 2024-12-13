@@ -797,6 +797,10 @@ body {
     .glow{
         color: #EDFFCC;
     }
+
+    .glow:hover{
+        color: #EDFFCC;
+    }
     
     .intro-text p {
         font-size: small;
