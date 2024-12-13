@@ -694,7 +694,7 @@ body {
     .skills {
         padding: 1.5em 1rem;
         text-align: center;
-        height: 520px;
+        height: 510px;
     
     }
     
@@ -745,8 +745,8 @@ body {
         border-top-left-radius: 0%;
         border-top-right-radius: 0%;
         padding: 10px 0;
-       /* z-index: 100;*/
-        width: inherit;
+        z-index: 100;
+        width: 250px;
     }
 
     .section-title {
@@ -770,7 +770,7 @@ body {
         /* Centers the image */
         background-repeat: no-repeat;
         /* Prevents tiling */
-        color: #EDFFCC;
+        color: #3B5704;
     }
     
     .about-content {
@@ -780,7 +780,7 @@ body {
         flex-direction: column;
         opacity: 0;
         animation: fadeInUp 1.5s forwards;
-        color: #EDFFCC;
+        color: #3B5704;
         text-align: left;
         padding: 10px;
     }
@@ -792,6 +792,10 @@ body {
         text-align: initial;
         padding-left: 25px;
         display: none;
+    }
+
+    .glow{
+        color: #EDFFCC;
     }
     
     .intro-text p {
