@@ -125,15 +125,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(me.jpg);
-    height: 900px;
-    background-size: inherit;
+    background-image: url(about\ BG.jpeg);
+    background-size: 100%;
     /* Makes the image cover the entire page */
     background-position: center;
     /* Centers the image */
     background-repeat: no-repeat;
     /* Prevents tiling */
-    color: #3B5704;
+    color: #EDFFCC;
+    width: 100%;
+    padding-bottom: 30px;
 }
 
 .about-content {
@@ -143,7 +144,7 @@ body {
     flex-direction: column;
     opacity: 0;
     animation: fadeInUp 1.5s forwards;
-    color: #3B5704;
+    color: #EDFFCC;
     text-align: left;
 }
 
@@ -165,10 +166,10 @@ body {
     font-weight: 800;
 }
 
-.glow:hover {
-    color: #EDFFCC;
-    transition: ease-in;
+.glow{
+    color: #3B5704;
 }
+
 
 /* Skills Section */
 .skills {
@@ -546,7 +547,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url(me.jpg);
+        background-image: url(aesthme.jpeg);
         height: 100%;
         background-size: inherit;
         /* Makes the image cover the entire page */
@@ -762,15 +763,16 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url(aesthme.jpeg);
+        background-image: url(about\ BG.jpeg);
         height: 100%;
-        background-size: inherit;
+        background-size: 100%;
         /* Makes the image cover the entire page */
         background-position: center;
         /* Centers the image */
         background-repeat: no-repeat;
         /* Prevents tiling */
         color: #3B5704;
+        padding-bottom: 20px;
     }
     
     .about-content {
@@ -795,11 +797,11 @@ body {
     }
 
     .glow{
-        color: #EDFFCC;
+        color: #3B5704;
     }
 
     .glow:hover{
-        color: #EDFFCC;
+        color: #3B5704;
     }
     
     .intro-text p {
