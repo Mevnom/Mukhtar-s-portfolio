@@ -766,8 +766,8 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url(about\ BG.jpeg);
-       height: 900px;
+        background-image: url(bg\ mobile.jpeg);
+       height: 1050px;
         background-size: 100%;
         /* Makes the image cover the entire page */
         background-position: center;
