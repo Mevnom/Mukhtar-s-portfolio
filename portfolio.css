@@ -768,7 +768,7 @@ body {
         align-items: center;
         background-image: url(bg\ mobile.jpeg);
        height: 1250px;
-        background-size: 100%;
+        background-size: cover;
         /* Makes the image cover the entire page */
         background-position: center;
         /* Centers the image */
