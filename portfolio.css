@@ -767,7 +767,7 @@ body {
         flex-direction: column;
         align-items: center;
         background-image: url(bg\ mobile.jpeg);
-       height: 1250px;
+       height: 100%;
         background-size: cover;
         /* Makes the image cover the entire page */
         background-position: center;
@@ -775,7 +775,7 @@ body {
         background-repeat: no-repeat;
         /* Prevents tiling */
         color: #3B5704;
-        padding-bottom: 20px;
+        padding-bottom: 25px;
 
     }
     
