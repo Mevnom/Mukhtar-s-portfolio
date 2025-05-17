@@ -8,44 +8,25 @@
 }
 
 body {
-    background-color: #3B5704;
-    color: #EDFFCC;
+    background-color: #FAFAF9;
+    color: #2B2B2B;
     line-height: 1.6;
     font-family: 'poppins', sans-serif;
 }
 
 .topp {
-    background-image: url(me.png.jpg);
-    background-size: cover;
-    /* Makes the image cover the entire page */
-    background-position: center;
-    /* Centers the image */
-    background-repeat: no-repeat;
-    /* Prevents tiling */
-    color: #3B5704;
-    height: 900px;
+    padding-top: 15px;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem 2rem;
-}
-
-.navbar h1 {
-    font-size: 1.5rem;
 }
 
 .navbar nav ul {
     display: flex;
     list-style: none;
-}
-
-.logo a {
-    text-decoration: none;
-    color: inherit;
 }
 
 .navbar nav ul li {
@@ -55,61 +36,60 @@ body {
 .navbar nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    color: #3B5704;
+    color: #2B2B2B;
 }
 
 .navbar nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Hero Section */
 .hero {
-    text-align: center;
-    padding: 5rem 2rem;
-    padding-top: 600px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 40px;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.hero-image {
+    width: 40%;
+    margin: auto;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-    color: #EDFFCC;
+.hero-image img {
+    margin: auto;
+    border-radius: 15px;
 }
-
 
 .intro {
-    font-size: xx-large;
     font-weight: bolder;
+    width: 60%;
+    padding: 7px;
+}
+
+.intro h1 {
+    font-size: xx-large;
+}
+
+.intro p {
+    font-size: medium;
+    font-weight: normal;
+    padding-top: 10px;
 }
 
 .cta {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    background: #3B5704;
-    color: #EDFFCC;
+    padding: 15px;
+    font-size: medium;
+    background: #2B2B2B;
+    color: #FAFAF9;
     border: none;
     cursor: pointer;
-}
-
-.cta a {
-    color: inherit;
     text-decoration: none;
-}
-
-.cta a:hover {
-    color: #3B5704;
+    margin: auto;
 }
 
 .cta:hover {
-    background: #EDFFCC;
-    color: #3B5704;
-    border-radius: 7px;
-    font-weight: bold;
+    color: #2B2B2B;
+    background-color: #FAFAF9;
 }
 
 .section-title {
@@ -132,7 +112,6 @@ body {
     /* Centers the image */
     background-repeat: no-repeat;
     /* Prevents tiling */
-    color: #EDFFCC;
     width: 100%;
     padding-bottom: 30px;
 }
@@ -144,32 +123,8 @@ body {
     flex-direction: column;
     opacity: 0;
     animation: fadeInUp 1.5s forwards;
-    color: #EDFFCC;
     text-align: left;
 }
-
-.intro-text h2 {
-    font-size: 1.8rem;
-    color: #3B5704;
-    margin-bottom: 15px;
-    text-align: initial;
-    padding-left: 25px;
-}
-
-
-.intro-text p {
-    font-size: 1.1rem;
-    line-height: 2.3;
-    max-width: 1100px;
-    color: #3B5704;
-    width: 1100px;
-    font-weight: 800;
-}
-
-.glow{
-    color: #3B5704;
-}
-
 
 /* Skills Section */
 .skills {
@@ -433,38 +388,10 @@ body {
         font-size: medium;
     }
 
-    .topp {
-        height: 500px;
-    }
-
     .navbar {
         padding: 0.5rem 0.5rem;
     }
 
-    .navbar h1 {
-        font-size: larger;
-    }
-
-    .hero {
-        padding-top:  290px;
-    }
-    
-    .hero h2 {
-       font-size: medium;
-        margin-bottom: 0px;
-    }
-    
-    .hero p {
-        font-size: small;
-        margin-bottom: 0px;
-        color: #3B5704;
-    }
-
-    .intro {
-        font-size: larger;
-        font-weight: bolder;
-    }
-    
     .cta {
         padding: 7px 7px;
         font-size: x-small;
@@ -472,37 +399,37 @@ body {
         border-radius: 3px;
         font-weight: bold;
     }
-    
-    
+
+
     .skills {
         padding: 1.5em 1rem;
         text-align: center;
         height: 560px;
-    
+
     }
-    
-    
+
+
     .skills h1 {
         font-size: x-large;
         font-weight: 700;
     }
-    
+
     .skill-cards {
         display: flex;
         flex-direction: column;
         gap: 2rem;
         justify-content: center;
         flex-wrap: wrap;
-        padding-top: 55px ;
+        padding-top: 55px;
     }
-    
+
     .dpc {
         position: relative;
         /* Necessary for positioning the dropdown */
         display: inline-block;
         /* Ensures the dropdown is tied to the div */
     }
-    
+
     .card {
         padding: 1.5rem 1.5rem;
         background-color: #EDFFCC;
@@ -515,7 +442,7 @@ body {
         width: 250px;
         margin: auto;
     }
-    
+
     .dropdown-menu {
         display: none;
         /* Hidden by default */
@@ -542,7 +469,7 @@ body {
         animation: fadeIn 2s forwards;
         color: #3B5704;
     }
-    
+
     .about-me {
         display: flex;
         flex-direction: column;
@@ -559,7 +486,7 @@ body {
         padding-bottom: 20px;
 
     }
-    
+
     .about-content {
         display: flex;
         max-width: 100%;
@@ -571,25 +498,7 @@ body {
         text-align: left;
         padding: 10px;
     }
-    
-    .intro-text h2 {
-        font-size: x-large;
-        color: #3B5704;
-        margin-bottom: 15px;
-        text-align: initial;
-        padding-left: 25px;
-        display: none;
-    }
-    
-    
-    .intro-text p {
-        font-size: small;
-        line-height: 2;
-        max-width: 100%;
-        color: #3B5704;
-        width: 100%;
-        font-weight: bold;
-    }
+
 
     .Choose {
         margin-top: 10px;
@@ -598,7 +507,7 @@ body {
         width: 100%;
         font-size: small;
     }
-    
+
     .Choose h1 {
         text-align: center;
         font-size: large;
@@ -608,7 +517,7 @@ body {
         padding: 1rem 2rem;
         text-align: center;
     }
-    
+
     .mailco {
         text-align: initial;
         border: #EDFFCC 1px solid;
@@ -621,30 +530,30 @@ body {
         border-radius: 15px;
         color: #3B5704;
     }
-    
+
     .mailco p {
         font-size: small;
         font-weight: bold;
     }
-    
+
     .mailco p a {
         text-decoration: underline;
         font-size: small;
         font-weight: normal;
         color: #3B5704;
     }
-    
+
     .contact h1 {
         font-weight: 700;
         font-size: x-large;
     }
 
-    .riri{
-    width: 100%;
+    .riri {
+        width: 100%;
     }
-    
-    
-    
+
+
+
 
 
 }
@@ -656,40 +565,22 @@ body {
         font-size: medium;
     }
 
-    .topp {
-        height: 580px;
-    }
-
     .navbar {
         padding: 0.5rem 0.5rem;
     }
 
-    .navbar h1 {
-        font-size: larger;
-    }
 
-    .hero {
-        padding-top:  350px;
-    }
-    
-    .hero h2 {
-       font-size: medium;
-        margin-bottom: 0px;
-    }
-    
     .hero p {
-        font-size: small;
-        margin-bottom: 0px;
-        color: #EDFFCC;
+        font-size: medium;
     }
 
     .intro {
         font-size: larger;
         font-weight: bolder;
     }
-    
+
     .cta {
-        padding: 7px 7px;
+        padding: 11;
         font-size: x-small;
         width: 80px;
         border-radius: 3px;
@@ -699,30 +590,30 @@ body {
         padding: 1.5em 1rem;
         text-align: center;
         height: 510px;
-    
+
     }
-    
+
     .skills h1 {
         font-size: x-large;
         font-weight: 700;
     }
-    
+
     .skill-cards {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         justify-content: center;
         flex-wrap: wrap;
-        padding-top: 50px ;
+        padding-top: 50px;
     }
-    
+
     .dpc {
         position: relative;
         /* Necessary for positioning the dropdown */
         display: inline-block;
         /* Ensures the dropdown is tied to the div */
     }
-    
+
     .card {
         padding: 1rem 1rem;
         background-color: #EDFFCC;
@@ -735,7 +626,7 @@ body {
         width: 250px;
         margin: auto;
     }
-    
+
     .dropdown-menu {
         display: none;
         /* Hidden by default */
@@ -761,13 +652,13 @@ body {
         animation: fadeIn 2s forwards;
         color: #3B5704;
     }
-    
+
     .about-me {
         display: flex;
         flex-direction: column;
         align-items: center;
         background-image: url(bg\ mobile.jpeg);
-       height: 100%;
+        height: 100%;
         background-size: cover;
         /* Makes the image cover the entire page */
         background-position: center;
@@ -778,7 +669,7 @@ body {
         padding-bottom: 25px;
 
     }
-    
+
     .about-content {
         display: flex;
         max-width: 100%;
@@ -790,24 +681,7 @@ body {
         text-align: left;
         padding: 10px;
     }
-    
-    .intro-text h2 {
-        font-size: x-large;
-        color: #3B5704;
-        margin-bottom: 15px;
-        text-align: initial;
-        padding-left: 25px;
-        display: none;
-    }
 
-    .glow{
-        color: #3B5704;
-    }
-
-    .glow:hover{
-        color: #3B5704;
-    }
-    
     .intro-text p {
         font-size: small;
         line-height: 2;
@@ -824,16 +698,16 @@ body {
         width: 100%;
         font-size: small;
     }
-    
+
     .Choose h1 {
         text-align: center;
         font-size: large;
     }
-    
+
     .contact {
         text-align: center;
     }
-    
+
     .mailco {
         text-align: initial;
         border: #EDFFCC 1px solid;
@@ -846,19 +720,19 @@ body {
         border-radius: 15px;
         color: #3B5704;
     }
-    
+
     .mailco p {
         font-size: smaller;
         font-weight: bold;
     }
-    
+
     .mailco p a {
         text-decoration: underline;
         font-size: smaller;
         font-weight: normal;
         color: #3B5704;
     }
-    
+
     .contact h1 {
         font-weight: 700;
         font-size: x-large;

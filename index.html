@@ -7,7 +7,7 @@
     <title>Mukhtar's Portfolio</title>
     <link rel="stylesheet" href="portfolio.css">
     <link rel="icon" type="image/x-icon" href="icon.jpeg">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
@@ -16,7 +16,7 @@
     <div class="topp">
         <!-- Navbar-->
         <header class="navbar">
-            <h1 class="logo"> <a href="index.html">draco.dev</a></h1>
+            <h1 class="logo"> <!-- <a href="index.html">draco.dev</a> --></h1>
             <nav>
                 <ul>
                     <li><a href="resume.html">Resume</a></li>
@@ -24,24 +24,30 @@
                 </ul>
             </nav>
         </header>
+    </div>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="intro">Hi, I'm <r style="color: #EDFFCC;"> Mukhtar Yagboyaju </r>
-            </div>
-            <br>
+    <section class="hero">
+        <div class="intro">
+            <h1> Hello there, I'm Mukhtar!</h1>
             <p>
-                Web Developer &nbsp; | &nbsp; Product Designer &nbsp; |&nbsp; Graphics
-                Designer &nbsp; | &nbsp; Shopify Expert 
-            </p><br>
+                A front-end developer, product designer and shopify expert with lots of other auxilliary skills. My
+                experience in various fields give me the perfect edge in making unique projects and intellectual
+                contributions. I'm available for both long and short term projects, feel free to reach out and go
+                through my resume and portfolio. Have a nice day!
+            </p>
+            <br>
             <a href="tel:+2348125617036">
-                <button class="cta" onclick="scrollToSection('contact')">
+                <button class="cta">
                     Get In Touch
                 </button>
             </a>
-        </section>
+        </div>
+        <div class="hero-image">
+            <img src="me.png.jpg" alt="" height="90%" width="90%">
+        </div>
+    </section>
 
-    </div>
+
 
     <!-- Skills Section -->
     <div id="skills" class="skills">
