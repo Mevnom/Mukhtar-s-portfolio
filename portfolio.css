@@ -569,21 +569,22 @@ body {
         padding: 0.5rem 0.5rem;
     }
 
-
-    .hero p {
-        font-size: medium;
-    }
-
     .intro {
         font-size: larger;
         font-weight: bolder;
+        width: 55%;
+    }
+
+    .hero-page{
+        width: 45%;
     }
 
     .cta {
-        padding: 11;
+        padding: 15px;
         font-size: x-small;
         width: 80px;
         border-radius: 3px;
+        margin-left: 10px;
     }
 
     .skills {
@@ -682,14 +683,6 @@ body {
         padding: 10px;
     }
 
-    .intro-text p {
-        font-size: small;
-        line-height: 2;
-        max-width: 100%;
-        color: #3B5704;
-        width: 100%;
-        font-weight: bold;
-    }
 
     .Choose {
         margin-top: 10px;
