@@ -347,7 +347,37 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (min-width: 1024px) {
+.project-grid{
+    gap: 70px;
+}
+
+.cta{
+    border-radius: 4px;
+    margin-top: 60px;
+}
+
+.hero-image img{
+    width: 60%;
+    height: 60%;
+    margin: auto;
+}
+
+.hero{
+    padding-top: 70px;
+}
+
+.intro p{
+    line-height: 2.4;
+}
+
+.hero-image{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+}
 
 @media screen and (max-width: 768px) {
     .body {
@@ -537,6 +567,10 @@ body {
         justify-content: center;
         flex-wrap: wrap;
         padding-top: 50px;
+    }
+
+    .socials{
+        gap: 20px;
     }
 
     .dpc {
