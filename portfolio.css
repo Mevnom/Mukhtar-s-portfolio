@@ -712,7 +712,7 @@ footer {
 
     .ctai {
         border-radius: 4px;
-        }
+    }
 
     .hero-image img {
         width: 60%;
@@ -830,6 +830,10 @@ footer {
         z-index: 1200;
     }
 
+    .navbar ul {
+        gap: 1.8rem;
+    }
+
     .body {
         line-height: 1.5;
         width: 100%;
@@ -839,6 +843,10 @@ footer {
     .intro {
         font-size: larger;
         font-weight: bolder;
+    }
+
+    .intro h1 {
+        font-size: 25px;
     }
 
     .hero-page {
@@ -921,4 +929,19 @@ footer {
 
 
 
+}
+
+@media screen and (max-width: 390px) {
+
+    .navbar ul li {
+        z-index: 1200;
+    }
+
+    .navbar ul {
+        gap: 1.4rem;
+    }
+
+    .intro h1 {
+        font-size: 24px;
+    }
 }
