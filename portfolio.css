@@ -885,6 +885,7 @@ footer {
         animation: fadeInUp 1.5s forwards;
         width: 100%;
         font-size: small;
+        margin-top: 25%;
     }
 
     .Choose h1 {
@@ -944,4 +945,100 @@ footer {
     .intro h1 {
         font-size: 24px;
     }
+
+    .navbar ul li a span i {
+        font-size: 23px;
+    }
+
+    .card {
+        padding-top: .7rem;
+    }
+
+    .card-text {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .card-btn {
+        padding-left: 12px;
+    }
+
+    .Choose {
+        margin-top: 30%;
+    }
+
+    .socials {
+        padding-left: 55px;
+    }
+
+    .mailco {
+        padding-left: 18px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .navbar ul li {
+        z-index: 1200;
+    }
+
+    .navbar ul {
+        gap: .9rem;
+    }
+
+    .intro h1 {
+        font-size: 24px;
+    }
+
+    .navbar ul li a span i {
+        font-size: 20px;
+    }
+
+    .card img {
+        width: 240px;
+        height: 240px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
+
+    .Choose {
+        margin-top: 30%;
+    }
+
+    .navbar ul li a span p {
+        font-size: smaller;
+        font-weight: normal;
+    }
+
+    .card {
+        padding-top: .5rem;
+    }
+
+    .card-text {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .card-btn {
+        padding-left: 10px;
+    }
+
+    .mailco {
+        padding-left: 18px;
+    }
+
+    .exp h2 {
+        line-height: 50px;
+    }
+
+    .socials {
+        padding-left: 40px;
+    }
+
+    .hero {
+        margin-top: 130px;
+    }
+
 }
