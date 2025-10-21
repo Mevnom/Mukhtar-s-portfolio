@@ -14,57 +14,121 @@ body {
     font-family: 'poppins', sans-serif;
 }
 
+header {
+    margin-top: 0px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+}
+
 .navbar {
     display: flex;
-    justify-content: space-between;
-    padding-top: 15px;
-    padding-right: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 7px;
+    backdrop-filter: blur(5px);
+    /* d magic */
+    -webkit-backdrop-filter: blur(5px);
+    padding: .5rem;
+    color: #fff;
+    max-width: 400px;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+    border: 1px solid rgba(212, 210, 210, 0.733);
+    width: 80%;
+    margin-top: 10px;
 }
 
-.navbar nav ul {
+.navbar ul {
     display: flex;
+    flex-direction: row;
     list-style: none;
+    margin: auto;
+    z-index: 1100;
+    justify-content: space-around;
+    gap: 1.8em;
 }
 
-.navbar nav ul li {
-    margin-left: 1.5rem;
+.navbar ul li {
+    margin: auto;
+    width: max-content;
 }
 
-.navbar nav ul li a {
+.navbar ul li a {
     text-decoration: none;
-    font-weight: bold;
     color: #2B2B2B;
+    display: flex;
 }
 
-.navbar nav ul li a:hover {
-    text-decoration: underline;
+
+
+.navbar ul li a span {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar ul li a {
+    display: inline-flex;
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    transform: translateY(-3px);
+}
+
+/* .rsp{
+    padding-bottom: 4px;
+}
+
+.psp{
+    padding-bottom: 3px;
+} */
+
+.navbar ul li a span p {
+    font-size: small;
+    font-weight: normal;
+}
+
+.navbar ul li a span i {
+    font-size: 25px;
+}
+
+.blog {
+    padding: 19px;
+    font-size: medium;
+    background-color: #2B2B2B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
 .hero {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 150px;
+    padding-left: 25px;
 }
 
 .hero-image {
     width: 40%;
-    margin: auto;
+    padding-left: 7px;
 }
 
 .hero-image img {
-    margin: auto;
     border-radius: 15px;
 }
 
 .intro {
     font-weight: bolder;
-    width: 60%;
     padding: 7px;
 }
 
 .intro h1 {
-    font-size: xx-large;
+    color: #2B2B2B;
 }
 
 .intro p {
@@ -73,8 +137,16 @@ body {
     padding-top: 10px;
 }
 
+.btn-span {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 0px;
+}
+
+
 .cta {
-    padding: 15px;
+    padding: 20px;
     font-size: medium;
     background: #2B2B2B;
     color: #FAFAF9;
@@ -84,10 +156,27 @@ body {
     margin-top: 30px;
 }
 
+.ctai {
+    padding: 20px;
+    font-size: medium;
+    background: #2B2B2B;
+    color: #FAFAF9;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.ctai:hover {
+    color: white;
+    background-color: green;
+    font-weight: normal;
+}
 
 .cta:hover {
-    color: #2B2B2B;
-    background-color: #FAFAF9;
+    color: white;
+    background-color: green;
+    font-weight: normal;
 }
 
 .skills {
@@ -96,33 +185,133 @@ body {
     height: 500px;
 }
 
-.skill-cards {
+/* ---------- Carousel styles (replace old scroll-container / item CSS) ---------- */
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    /* optional center constraint */
+    margin: 0 auto;
+    overflow: hidden;
+    /* prevent accidental overflow */
+}
+
+.scroll-container {
     display: flex;
-    gap: 3rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0;
+    /* IMPORTANT: no left padding that shifts initial slide */
+    margin: 0;
+    gap: 0;
+    /* no gap between flex children (keeps width calc simple) */
+    scrollbar-width: none;
+    /* firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Each item must be EXACTLY the container width */
+.item {
+    flex: 0 0 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    padding-top: 100px;
+    align-items: center;
+    padding: 20px;
+    /* optional inner padding so the card isn't edge-to-edge */
 }
 
-.dpc {
-    position: relative;
-    /* Necessary for positioning the dropdown */
-    display: inline-block;
-    /* Ensures the dropdown is tied to the div */
-    width: fit-content;
-    margin: auto;
-}
-
+/* Card appearance (centered inside each slide) */
 .card {
-    padding: 2rem 2rem;
-    background-color: #EDFFCC;
-    color: #3B5704;
-    border-radius: 5px;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    cursor: pointer;
+    width: 300px;
+    /* card stays a fixed block centered in the slide */
+    max-width: 90%;
+    height: 520px;
+    padding-top: 1rem;
+    background-color: whitesmoke;
+    color: #1c2120;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    border: 1px solid #2B2B2B;
 }
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 260px;
+    height: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.card button {
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.card button:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
+    padding: 11px;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.book {
+    background-color: #6F9E11;
+}
+
+.proj {
+    background-color: #2B2B2B;
+}
+
+/* Dots */
+.dots {
+    text-align: center;
+    margin-top: 7px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #bbb;
+    cursor: pointer;
+    transition: background .25s;
+}
+
+.dot.active {
+    background: #3a5a40;
+}
+
 
 .rgre {
     color: #3B5704;
@@ -131,45 +320,8 @@ body {
 }
 
 
-.dropdown-menu {
-    display: none;
-    /* Hidden by default */
-    position: absolute;
-    top: 97%;
-    /* Positions below the custom div */
-    background-color: #EDFFCC;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-    padding: 10px 0;
-    min-width: 100px;
-    z-index: 1;
-    width: 100%;
-}
-
-.dropdown-item {
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #3B5704;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-item:hover {
-    background-color: #FAFAF9;
-    color: #3B5704;
-    font-weight: bolder;
-}
-
-/* Show dropdown on hover */
-.dpc:hover .dropdown-menu {
-    display: block;
-    /* Display dropdown when the parent is hovered */
-}
-
 .Choose {
-    margin-top: 20px;
+    margin-top: 20%;
     line-height: 4;
 }
 
@@ -183,20 +335,111 @@ body {
 
 .Choose ol {
     padding-left: 35px;
+    padding-right: 15px;
+}
+
+.experience {
+    padding-left: 35px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding-top: 50px;
+}
+
+.experience ol {
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.experience h1 {
+    font-size: x-large;
+}
+
+.experience h2 {
+    font-size: large;
+    font-weight: 600;
+}
+
+.experience button {
+    padding: 10px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+}
+
+.hygie {
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    border: none;
+    background-color: #6F9E11;
+    text-align: center;
+}
+
+.calcubud {
+    color: orange;
+    font-weight: bold;
+    font-size: medium;
+    border: 1.5px solid orange;
+    background-color: white;
+    text-align: center;
+}
+
+.trav {
+    color: #f24e1e;
+    font-weight: bold;
+    font-size: medium;
+    border: 1.5px solid #1c2120;
+    background-color: #1c2120;
+    text-align: center;
+}
+
+.delta {
+    color: blue;
+    font-weight: bold;
+    font-size: medium;
+    border: 1.5px solid blue;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+
+.exp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exp span {
+    font-size: small;
 }
 
 .socials {
     display: flex;
     justify-content: center;
-    gap: 1.2rem;
-    margin-bottom: 2rem;
-    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 9rem;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-left: 70px;
+}
+
+.socials a h2 {
+    text-decoration: underline;
 }
 
 .socials a {
     color: #2B2B2B;
     transition: transform 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    text-indent: block;
+    gap: 20px;
 }
+
 
 .socials a:hover {
     transform: scale(1.2);
@@ -207,6 +450,7 @@ body {
 .projects {
     padding: 3rem 2rem;
     text-align: center;
+    padding-top: 80px;
 }
 
 .project-grid {
@@ -232,10 +476,29 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.project-card p {
+    text-indent: 25px;
+}
+
+.rbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
 /* Contact Section */
 .contact {
     padding: 3rem 2rem;
     text-align: center;
+    margin-top: 10%;
+}
+
+.border {
+    border-bottom: 1px solid #2B2B2B;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
 }
 
 .mailco {
@@ -268,6 +531,87 @@ body {
     font-size: xx-large;
 }
 
+.booking {
+    margin-top: 10%;
+}
+
+.booking h2 {
+    text-align: center;
+}
+
+.booking form {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking form button {
+    background-color: #2B2B2B;
+    width: 90%;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: large;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.booking form button:hover {
+    background-color: green;
+}
+
+.booking span {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking span div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking span div p {
+    padding-left: 5%;
+    font-weight: bold;
+}
+
+.booking span input {
+    width: 90%;
+    border: #1c2120 1px solid;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-style: poppins;
+    font-weight: normal;
+    color: #2B2B2B;
+    margin: auto;
+}
+
+.booking span textarea {
+    width: 90%;
+    border: #1c2120 1px solid;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    padding-left: 10px;
+    font-style: poppins;
+    font-weight: normal;
+    color: #2B2B2B;
+    padding-top: 10px;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+    padding: 40px;
+}
+
 .preview-btn {
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -275,7 +619,7 @@ body {
     color: #FAFAF9;
     border: none;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 2px;
     font-weight: bold;
 }
 
@@ -289,11 +633,9 @@ body {
 }
 
 .preview-btn:hover {
-    background: #EDFFCC;
-    color: #2B2B2B;
-    border-radius: 5px;
+    background: green;
+    color: white;
     font-weight: bolder;
-    box-shadow: 0 7px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Add animations */
@@ -326,7 +668,7 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
-.skill-cards .card {
+.scroll-container .card {
     animation: slideIn 0.6s ease forwards;
     animation-delay: calc(0.2s * var(--i));
 }
@@ -355,33 +697,30 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .navbar ul {
+        gap: 2.9rem;
+    }
+
     .project-grid {
         gap: 70px;
     }
 
     .cta {
         border-radius: 4px;
-        margin-top: 60px;
     }
+
+    .ctai {
+        border-radius: 4px;
+        }
 
     .hero-image img {
         width: 60%;
         height: 60%;
-        margin: auto;
-    }
-
-    .hero {
-        padding-top: 70px;
     }
 
     .intro p {
         line-height: 2.4;
-    }
-
-    .hero-image {
-        margin: auto;
-        display: flex;
-        justify-content: center;
     }
 
 }
@@ -391,6 +730,10 @@ body {
         line-height: 1.5;
         width: 100%;
         font-size: medium;
+    }
+
+    .navbar ul {
+        gap: 2.9rem;
     }
 
     .intro p {
@@ -403,9 +746,12 @@ body {
         border-radius: 3px;
     }
 
-    .cta:hover {
-        font-weight: bold;
+    .ctai {
+        padding: 10px;
+        font-size: small;
+        border-radius: 3px;
     }
+
 
 
     .skills {
@@ -420,55 +766,8 @@ body {
         font-weight: 700;
     }
 
-    .skill-cards {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding-top: 55px;
-    }
-
-    .dpc {
-        position: relative;
-        /* Necessary for positioning the dropdown */
-        display: inline-block;
-        /* Ensures the dropdown is tied to the div */
-    }
-
-    .card {
-        padding: 1.5rem 1.5rem;
-        background-color: #EDFFCC;
-        color: #3B5704;
-        border-radius: 5px;
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
-        cursor: pointer;
-        width: 250px;
-        margin: auto;
-    }
-
-    .dropdown-menu {
-        display: none;
-        /* Hidden by default */
-        position: absolute;
-        top: 97%;
-        /* Positions below the custom div */
-        left: 0;
-        background-color: #EDFFCC;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        border-top-left-radius: 0%;
-        border-top-right-radius: 0%;
-        padding: 10px 0;
-        min-width: 50px;
-        z-index: 100;
-        width: 100%;
-    }
 
     .Choose {
-        margin-top: 10px;
         line-height: 3;
         animation: fadeInUp 1.5s forwards;
         width: 100%;
@@ -526,6 +825,11 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+
+    .navbar ul li {
+        z-index: 1200;
+    }
+
     .body {
         line-height: 1.5;
         width: 100%;
@@ -535,7 +839,6 @@ body {
     .intro {
         font-size: larger;
         font-weight: bolder;
-        width: 55%;
     }
 
     .hero-page {
@@ -544,82 +847,32 @@ body {
 
 
     .cta {
-        padding: 10px;
-        font-size: small;
+        padding: 13px;
+        font-size: medium;
         border-radius: 3px;
-        margin-left: 17px;
         margin-top: 20px;
     }
 
-    .cta:hover {
-        color: #FAFAF9;
-        background-color: #2B2B2B;
+    .ctai {
+        padding: 13px;
+        font-size: medium;
+        border-radius: 3px;
+        margin-top: 20px;
     }
 
-    .skills {
-        padding: 1.5em 1rem;
-        text-align: center;
-        height: 510px;
-
-    }
 
     .skills h1 {
         font-size: x-large;
         font-weight: 700;
     }
 
-    .skill-cards {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding-top: 50px;
-    }
 
     .socials {
         gap: 10px;
     }
 
-    .dpc {
-        position: relative;
-        /* Necessary for positioning the dropdown */
-        display: inline-block;
-        /* Ensures the dropdown is tied to the div */
-    }
-
-    .card {
-        padding: 1rem 1rem;
-        background-color: #EDFFCC;
-        color: #3B5704;
-        border-radius: 5px;
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
-        cursor: pointer;
-        width: 250px;
-        margin: auto;
-    }
-
-    .dropdown-menu {
-        display: none;
-        /* Hidden by default */
-        position: absolute;
-        top: 97%;
-        /* Positions below the custom div */
-        left: 0;
-        background-color: #EDFFCC;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        border-top-left-radius: 0%;
-        border-top-right-radius: 0%;
-        padding: 10px 0;
-        z-index: 100;
-        width: 250px;
-    }
 
     .Choose {
-        margin-top: 10px;
         line-height: 3;
         animation: fadeInUp 1.5s forwards;
         width: 100%;
@@ -638,26 +891,27 @@ body {
     .mailco {
         text-align: initial;
         border: #EDFFCC 1px solid;
-        width: 250px;
+        width: 270px;
         margin: auto;
-        padding-left: 15px;
+        padding-left: 12px;
+        padding-right: 12px;
         height: 180px;
         padding-top: 25px;
         background-color: #EDFFCC;
         border-radius: 15px;
-        color: #3B5704;
+        color: #2B2B2B;
     }
 
     .mailco p {
         font-size: smaller;
-        font-weight: bold;
+        font-weight: bolder;
     }
 
     .mailco p a {
         text-decoration: underline;
         font-size: smaller;
-        font-weight: normal;
-        color: #3B5704;
+        font-weight: bold;
+        color: #2B2B2B;
     }
 
     .contact h1 {
